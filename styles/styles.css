@@ -88,3 +88,8 @@ h1 {
     background-color: #504bd1;
     transition: background-color 0.5s ease;
 }
+.terminal {
+    background-color: red;
+    width: 560px;
+    height: 300px;
+}

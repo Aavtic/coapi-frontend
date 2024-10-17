@@ -3,6 +3,7 @@ const codeBox = document.querySelector("textarea");
 const output = document.querySelector(".outputext");
 const output_heading  = document.querySelector(".output-text");
 const status_text  = document.querySelector(".statustext");
+const terminal_box = document.querySelector(".terminal")
 
 
 button.onclick = () => {
@@ -55,5 +56,29 @@ function displayOutput(output_json) {
         status_text.style.color = "red"
         status_text.textContent = `STATUS: ${output_json.status}`
     }
+
 }
+
+window.addEventListener("keydown", (event) => {
+    if (event.defaultPrevented) {
+        return;
+    }
+    let key = event.key;
+    console.log(key, key.length);
+    const terminal_text = document.querySelector(".terminal-text");
+
+
+    if (key.length === 1) {
+        let current_text = terminal_text.textContent;
+        terminal_text.textContent = current_text + key;
+    } else {
+        if (key === "Backspace") {
+            let current_text = terminal_text.textContent.slice(0, -1);
+            terminal_text.textContent = current_text;
+        }
+    }
+
+    event.preventDefault();
+});
+
 
