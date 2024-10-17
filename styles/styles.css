@@ -1,5 +1,5 @@
 body {
-    background-color: #252729;
+    background-color: #090909;
     font-family: Arial, Helvetica, sans-serif;
     color: #e4e4f2;
 }
@@ -36,10 +36,8 @@ h1 {
 .container {
     display: flex;
     flex-direction: row; 
-    align-items: flex-start; 
     justify-content: flex-start; 
-    gap: 20px; 
-    margin-top: 20px; 
+    margin-top: 10px; 
 }
 
 .code_box_button {
@@ -52,9 +50,8 @@ h1 {
     color: whitesmoke;
     background-color: #504bd1;
     opacity: 0.5;
-    width: 50%;
+    width: 90%;
     height: 300px;
-    padding: 12px 20px;
     box-sizing: border-box;
     border: 2px solid grey;
     border-radius: 4px;
@@ -62,13 +59,20 @@ h1 {
 }
 
 .output {
+    align-items: flex-start;
+    justify-content: flex-start
     white-space: pre-wrap;
     width: 40%; /* Set the width of the output */
+    height: 280px;
     border: 1px solid grey;
     padding: 12px;
     border-radius: 4px;
     background-color: #333; /* Set a background for visibility */
     color: #e4e4f2; /* Text color */
+    margin-right: 100px;
+}
+
+.outputext {
 }
 
 .runbutton {
